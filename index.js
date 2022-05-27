@@ -23,12 +23,12 @@ mongoose.connect(URL,async()=>{
 
 app.use(express.json());
 app.use(cors())
-app.use("/api/auth", authRoute);
-app.use("/api/users", userRoute);
-app.use("/api/products", productRoute);
-app.use("/api/orders", orderRoute);
-app.use("/api/carts", cartRoute);
-app.use("/api/checkout", stripeRoute);
+app.use("/auth", authRoute);
+app.use("/users", userRoute);
+app.use("/products", productRoute);
+app.use("/orders", orderRoute);
+app.use("/carts", cartRoute);
+app.use("/checkout", stripeRoute);
 
 const port = process.env.PORT || 5000;
 app.listen(port, () => console.log("\x1b[33m",`Server is Running ${port}`));
