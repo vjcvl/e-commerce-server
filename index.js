@@ -11,7 +11,7 @@ const stripeRoute = require("./routes/stripe");
 const cors = require("cors");
 const stripe = require("stripe")(process.env.STRIPE_KEY)
 dotenv.config();
-const URL = 'mongodb+srv://vjdev:asdfghjkl@trainingcluster.4eb06.mongodb.net/?retryWrites=true&w=majority/ecommerce'
+const URL = 'mongodb+srv://vjdev:asdfghjkl@trainingcluster.4eb06.mongodb.net/?retryWrites=true&w=majority'
 mongoose.connect(URL,async()=>{
   try {
     console.log('DataBase connected');
